@@ -1,6 +1,6 @@
 /*
     Add this to the "elements" page to create fields formed from page or site data.
-    The data has to be saved as a unsplit string with ";" between the items.
+    The data has to be saved as a unsplit string with some distinctive letter/symbol between them.
     Load jquery first and then this file and then call the function out with options like shown in the example.js file.
 */
 
@@ -15,6 +15,7 @@ function GetAdminFields(options) {
     this.dataKeyName = '';
     this.savingButtonLabel = '';
     this.addingButtonLabel = '';
+    this.splitString = '';
     this.init(options);
     this.manipulateInputs();
     this.dataSaving();
@@ -24,7 +25,7 @@ function GetAdminFields(options) {
 GetAdminFields.prototype.init = function(options) {
     this.parentElement = options.parentElement;
     this.siteData = options.siteData;
-    this.dataLine = options.dataLine.split(';');
+    this.dataLine = options.dataLine.split(options.splitString);
     this.dataKeyName = options.dataKeyName;
     this.savingButtonLabel = options.savingButtonLabel;
     this.addingButtonLabel = options.addingButtonLabel;
