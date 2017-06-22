@@ -13,6 +13,7 @@ function GetAdminFields(options) {
     this.siteData = false;
     this.dataLine = [];
     this.dataKeyName = '';
+    this.pageID = '';
     this.savingButtonLabel = '';
     this.addingButtonLabel = '';
     this.splitString = '';
@@ -27,6 +28,7 @@ GetAdminFields.prototype.init = function(options) {
     this.siteData = options.siteData;
     this.dataLine = options.dataLine.split(options.splitString);
     this.dataKeyName = options.dataKeyName;
+    this.pageID = options.pageID;
     this.savingButtonLabel = options.savingButtonLabel;
     this.addingButtonLabel = options.addingButtonLabel;
     this.edicyDataobject = this.setEdicyDataObject();
@@ -73,7 +75,7 @@ GetAdminFields.prototype.setEdicyDataObject = function() {
     } else {
         return edicyData = new Edicy.CustomData({
             type: 'page',
-            id: pageID
+            id: this.pageID
         });
     }
 };

@@ -9,8 +9,9 @@ var optionsObject = {
     siteData: false, // If site data is false, the script handles it as page data
     savingButtonLabel: 'Salvesta',
     addingButtonLabel: 'lisa Tag',
-    dataLine: pageDataThingy, //
+    dataLine: '{{ page.data.someKey }}',
     dataKeyName: 'randomTags', // The key of the page or site object
+    pageID: '{{ page.id }}',
     splitString: ';', // A symbol or something, from what to split into an array
 };
 
