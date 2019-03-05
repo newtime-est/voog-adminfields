@@ -3,14 +3,16 @@ const path = require('path');
 
 module.exports = {
     entry: './src/voog-tags.js',
-    mode: 'production',
+    mode: 'development',
     target: 'web',
     resolve: {
         extensions: ['.js'],
     },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'app.bundle.js'
+        filename: "newtime-lib.js",
+        libraryTarget: "var",
+        library: "NTLibrary",
     },
     module: {
         rules: [

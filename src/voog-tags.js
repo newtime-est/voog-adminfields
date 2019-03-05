@@ -33,3 +33,12 @@ class TagsGroup {
         }
     }
 }
+
+const TestMethod = () => {
+    console.log("Successful!");
+};
+
+export {
+    TestMethod,
+    TagsGroup,
+};
