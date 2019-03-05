@@ -1,3 +1,6 @@
+//import { addButton } from './templates';
+import { createElement } from './create-element.js'
+
 class TagsGroup {
     constructor(options) {
       this.pageData = options.pageData;
@@ -8,7 +11,7 @@ class TagsGroup {
     
     init() {
         this.recieveGroups();
-        
+        this.addButtonsDOM();
     }
 
     recieveGroups() {
@@ -20,5 +23,14 @@ class TagsGroup {
 
         this.groups = groups;
     }
+
+    addButtonsDOM() {
+        createElement();
+        for (const group of this.groups) {
+            const temp = document.createElement('span');
+            temp.innerHTML = 'wututu';
+            document.querySelector(`.ntjs-tags-area[data-group='${group}']`).appendChild(temp);
+        }
+    }
+
   }
-  

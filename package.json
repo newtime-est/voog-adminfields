@@ -4,12 +4,13 @@
   "description": "Add or load jquery first then add voog-adminfields.js and then call the function out with options like shown in the example.js file.",
   "main": "example.js",
   "dependencies": {
+    "@babel/preset-env": "^7.3.4",
     "babel-cli": "^6.26.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "babel-loader": "^8.0.5",
     "babel-preset-es2015": "^6.24.1",
     "webpack": "^4.29.6",
